@@ -1,0 +1,20 @@
+<%= link_to 'Back to Megging List', action: 'index' %>
+<h1>Megging View</h1>
+
+<%=link_to'Edit Megging', edit_megging_path %>
+
+<dt>Name</dt>
+<dd><%= @megging.name %></dd>
+
+<dt>Color</dt>
+<dd><%= @megging.color %></dd>
+
+<dt>Size</dt>
+<dd><%= @megging.size %></dd>
+
+<dt>Tightness</dt>
+<dd><%= @megging.tightness %></dd>
+
+<dt>Photo</dt>
+<dd><%= image_tag @megging.photo_url, size: '400x500' %></dd>
+

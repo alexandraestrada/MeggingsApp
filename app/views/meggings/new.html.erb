@@ -1,0 +1,30 @@
+<h1>Add Your Megging</h1>
+ 
+<div>
+	<%= form_for @megging do |f| %>
+
+	<div>
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :color %><br />
+		<%= f.text_field :color %>
+	</div>
+	<div>
+		<%= f.label :size %><br />
+		<%=f.select :size, ['XS', 'S', 'M', 'L', 'XL'] %>
+	</div>
+	<div>
+		<%= f.label :tightness %><br />
+		<%= f.select :tightness, ["Skinny", "Super-Skinny", "Nut Huggers"] %> <br />
+	</div>
+	<div>
+		<%= f.label :photo %> <br />
+		<%= f.text_field :photo_url %>
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+	<% end %>
+</div>
