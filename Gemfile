@@ -5,6 +5,8 @@ gem 'rails', '4.0.2'
 
 gem 'mongoid', github: "mongoid/mongoid"
 
+gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
+
 gem 'bootstrap-sass', '~> 3.1.0'
 
 gem 'rails_12factor'

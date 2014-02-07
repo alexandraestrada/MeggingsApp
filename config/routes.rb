@@ -1,6 +1,8 @@
 Meggings2::Application.routes.draw do
 
   
+  get "users/index"
+  get "users/new"
   # get "meggings/index"
   # get "meggings/new"
   # get "meggings/show"
@@ -9,6 +11,10 @@ Meggings2::Application.routes.draw do
   delete "meggings/:id" => 'meggings#destroy'
   resources :meggings, only: [:index, :create, :new, :edit, :show, :update]
   get "meggings/welcome" => 'meggings#welcome'
+
+  resources :users, only: [:index,:new,:create]
+
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.
