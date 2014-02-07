@@ -37,6 +37,21 @@ class MeggingsController < ApplicationController
     @megging = Megging.find(params[:id])
   end
 
+
+  def update
+    @megging = Megging.find(params[:id])
+    if @megging.update_attributes(megging_params)
+      redirect_to action: 'index'
+    else 
+      render action: 'edit' 
+    end
+  end
+
+  def destroy
+    megging = Megging.find(params[:id])
+    megging.destroy
+    redirect_to action: :index
+  end
   
 
 

@@ -6,14 +6,16 @@ Meggings2::Application.routes.draw do
   # get "meggings/show"
   # get "meggings/edit"
 
+  delete "meggings/:id" => 'meggings#destroy'
   resources :meggings, only: [:index, :create, :new, :edit, :show, :update]
-  get "meggings/meggings" => 'meggings#meggings'
+  get "meggings/welcome" => 'meggings#welcome'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'meggings#meggings'
+  root 'meggings#welcome'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

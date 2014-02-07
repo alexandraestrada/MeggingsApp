@@ -3,6 +3,9 @@
 
 <%=link_to'Edit Megging', edit_megging_path %>
 
+<%=button_to'Delete Megging', megging_path(@megging), {method: :delete} %>
+
+
 <dt>Name</dt>
 <dd><%= @megging.name %></dd>
 
@@ -17,4 +20,8 @@
 
 <dt>Photo</dt>
 <dd><%= image_tag @megging.photo_url, size: '400x500' %></dd>
+
+
+
+
 

@@ -1,22 +1,28 @@
 <h1>Meggings List</h1>
 <%=link_to "Create Megging", new_megging_path %>
 <div class="container show">
+	<div class= "row">
+	<% @meggings.each do |megging| %>
+
+
  	<div class="col-md-4 col-s-6 col-xs-12 list"> 
- 		<% @meggings.each do |megging| %>
+ 		
 				<p class= "megging-name">
-					<%= image_tag(megging.photo_url, size: '300x400',) %></p>
+					<%= image_tag(megging.photo_url, size: '250x300', class: "image-center") %></p>
 				<p class="description">
-				<!-- Name: <%= megging.name%><br />
+				Name: <%= megging.name%><br />
 				Color: <%= megging.color %><br />
 				Size: <%= megging.size %><br />
-				Tightness: <%= megging.tightness %>	<br /> -->
+				Tightness: <%= megging.tightness %>	<br />
 				Details: <%= link_to megging.name, megging %>
 				</p>		
 				
-		<% end %>
+	
 
 	</div>
 
+		<% end %>
+	</div>
 </div>
 
 
