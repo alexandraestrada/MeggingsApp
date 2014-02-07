@@ -7,6 +7,8 @@ gem 'mongoid', github: "mongoid/mongoid"
 
 gem 'bootstrap-sass', '~> 3.1.0'
 
+gem 'rails_12factor'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
