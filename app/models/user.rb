@@ -1,7 +1,10 @@
 require 'bcrypt'
 class User
 	
-  include Mongoid::Document
+
+ include Mongoid::Document
+ 
+
   before_save :hash_stuff
   attr_accessor :password 
   
@@ -10,7 +13,12 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
-  private 
+  has_one :shopping_cart
+
+
+  def authenticated?(pwd)
+    self.hashed_password == BCrypt::Engine.hash_secret(pwd, self.salt)
+  end
 
  private
 

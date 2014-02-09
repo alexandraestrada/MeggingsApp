@@ -17,15 +17,16 @@ class MeggingsController < ApplicationController
       render action: 'new'
     end
   end
+
  
-  def update
-    @megging = Megging.find(params[:id])
-    if @megging.update_attributes(megging_params)
-      redirect_to action: 'index'
-    else 
-      render action: 'edit' 
-    end 
-  end
+  # def update
+  #   @megging = Megging.find(params[:id])
+  #   if @megging.update_attributes(megging_params)
+  #     redirect_to action: 'index'
+  #   else 
+  #     render action: 'edit' 
+  #   end 
+  # end
 
  
   def show

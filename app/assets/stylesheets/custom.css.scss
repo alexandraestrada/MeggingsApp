@@ -5,16 +5,23 @@ html,body {
   height:100%;
 }
 
-
-
 #header {
-	height: 100px;
+	height: 80px;
 	border: 1px solid black;
 	font-family: 'Montserrat Alternates', sans-serif;
 }
 #logo {
 	margin-left: 10px;
+	margin-top: -10px;
 }
+#sign-in {
+	text-align: right;
+	margin-top: 3px;
+	margin-right: 100px;
+	text-decoration: underline;
+
+}
+
 #logo2 {
 	color: #780e18;
 	font-family: Arial;
@@ -25,14 +32,6 @@ html,body {
 	padding-bottom: 70px;
 }
 
-// .carousel-caption {
-	
-// 	color: #780e18;
-// 	text-align: left;
-// 	margin-left: -40px; 
-
-
-// }
 
 .carousel-inner,.carousel,.item,.container {
   height:470px;
@@ -51,18 +50,23 @@ p.megging-name, p.description {
 	text-align: center;
 }
 
-
-
-
-
-.show {
-	// border: 1px solid black;
-	// width: 100%;
+.break {
+	height: 100px;
 }
 
-.list {
+.mDescription {
+	text-align: left;
 	
-	// border: 1px solid black;
-
-
+	width:700px;
+	margin: 0 auto;
+}
+ #megging-experience {
+ 	font-size: 150px;
+ }
+#definition {
+	text-align: left;
+	font-size: 25px;
+}
+#span-definition {
+	font-size: 19px;
 }

@@ -5,4 +5,6 @@ class Megging
   field :size, type: String
   field :photo_url, type: String
   field :tightness, type: String
+
+  has_and_belongs_to_many :shopping_carts
 end

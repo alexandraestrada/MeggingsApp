@@ -1,18 +1,25 @@
 Meggings2::Application.routes.draw do
 
   
-  get "users/index"
-  get "users/new"
+  # get "auths_controller/index"
+  # get "auths_controller/new"
+  # get "users/index"
+  # get "users/new"
   # get "meggings/index"
   # get "meggings/new"
   # get "meggings/show"
   # get "meggings/edit"
 
-  delete "meggings/:id" => 'meggings#destroy'
-  resources :meggings, only: [:index, :create, :new, :edit, :show, :update]
+
+  resources :meggings, only: [:index, :create, :new, :edit, :show, :update, :destroy]
+
   get "meggings/welcome" => 'meggings#welcome'
+  # delete "meggings/:id" => 'meggings#destroy'
 
   resources :users, only: [:index,:new,:create]
+  resources :auths, only: [:new, :create]
+  resources :shopping_carts 
+  delete "auths" => "auths#destroy"
 
   
 
