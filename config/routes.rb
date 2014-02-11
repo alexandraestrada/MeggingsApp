@@ -20,6 +20,7 @@ Meggings2::Application.routes.draw do
   resources :auths, only: [:new, :create]
   resources :shopping_carts 
   delete "auths" => "auths#destroy"
+  resources :profiles
 
   
 

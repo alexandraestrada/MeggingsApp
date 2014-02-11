@@ -1,0 +1,6 @@
+
+<h1 class = "greeting">
+	<% if current_user %>
+		<%= "Welcome " + current_user.username + "!" %>
+	<% end %>
+	<%= render 'layouts/meggingresults' %>

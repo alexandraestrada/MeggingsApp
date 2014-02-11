@@ -9,13 +9,20 @@
 <body>
 	<header id="header">
 		<p id="sign-in"><%= link_to 'Sign Up', new_user_path %><p>
-		
+
 		<h1 id="logo"> Meggings </h1>
 
 		<!-- <h3 id="logo2"> Men's Fashion Redefined.</h3> -->
+
+	<div class="pull-right">
+		<p>Hello</p> <%= current_user ? current_user.username + "!": "" %>
+	</div>
+
 	</header>
 
 <%= yield %>
+
+
 
 </body>
 </html>

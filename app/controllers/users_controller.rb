@@ -10,8 +10,8 @@ class UsersController < ApplicationController
    
 
   def create
-		u = User.create(params.require(:user).permit(:username, :password, :email))
-		session[:user_id] = u.id
+		user = User.create(params.require(:user).permit(:username, :password, :email))
+		session[:user_id] = user.id
 		redirect_to meggings_path
 	end
 end
