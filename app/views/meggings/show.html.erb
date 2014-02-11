@@ -1,9 +1,15 @@
-<%= link_to 'Back to Megging List', action: 'index' %>
-<h1>Megging View</h1>
+<%= link_to 'Back to Megging List', action: 'index' %><br /><br />
 
-<%=link_to'Edit Megging', edit_megging_path %>
 
-<%=button_to'Delete Megging', megging_path(@megging), {method: :delete} %>
+<!--%=link_to'Edit Megging', edit_megging_path %-->
+
+<!--%=#button_to'Delete Megging', megging_path(@megging), {method: :delete} %-->
+
+<div class= "megging-p-display">
+
+
+<dt></dt>
+<dd><%= image_tag @megging.photo_url, size: '400x500' %></dd>
 
 
 <dt>Name</dt>
@@ -18,8 +24,10 @@
 <dt>Tightness</dt>
 <dd><%= @megging.tightness %></dd>
 
-<dt>Photo</dt>
-<dd><%= image_tag @megging.photo_url, size: '400x500' %></dd>
+<dt> Price</dt>
+<dd><%= @megging.price %></dd><br />
+
+</div>
 
 
 

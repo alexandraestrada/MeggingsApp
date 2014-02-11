@@ -6,4 +6,8 @@ class ProfilesController < ApplicationController
 	end
 	def create
 	end
+	def show
+    @megging = Megging.find(params[:id])
+  
+	end
 end

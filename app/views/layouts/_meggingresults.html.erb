@@ -1,6 +1,6 @@
 <h1>Meggings List</h1>
-<%= link_to "sign out", auths_path, method: :delete %><br /><br />
-<%=link_to "Create Megging", new_megging_path %>
+
+
 <div class="container show">
 	<div class= "row">
 	<% @meggings.each do |megging| %>
@@ -11,11 +11,12 @@
 				<p class= "megging-name">
 					<%= image_tag(megging.photo_url, size: '250x300', class: "image-center") %></p>
 				<p class="description">
-				Name: <%= megging.name%><br />
+				<!-- Name: <%= megging.name%><br />
 				Color: <%= megging.color %><br />
 				Size: <%= megging.size %><br />
-				Tightness: <%= megging.tightness %>	<br />
-				Details: <%= link_to megging.name, megging %>
+				Tightness: <%= megging.tightness %>	<br /> -->
+				<%= megging.name %> <br />
+				<%= link_to "View Details", megging %>
 				</p>		
 				
 	

@@ -12,6 +12,7 @@ meggings = Megging.create ([
 		color: 'White', 
 		size: 'XS',
 		tightness: 'nut huggin',
+		price: '$89.99',
 		photo_url: 'megging1.png',
 	},
 	{
@@ -19,6 +20,7 @@ meggings = Megging.create ([
 		color: 'Black', 
 		size: 'M',
 		tightness: 'nuts huggin',
+		price: '$89.99',
 		photo_url: 'megging2.png',
 	},
 	{
@@ -26,6 +28,7 @@ meggings = Megging.create ([
 		color: 'Black', 
 		size: 'S',
 		tightness: 'super-skinny',
+		price: '$89.99',
 		photo_url: 'megging3.png',
 	},
 	{
@@ -33,6 +36,7 @@ meggings = Megging.create ([
 		color: 'Dark Grey', 
 		size: 'L',
 		tightness: 'skinny',
+		price: '$89.99',
 		photo_url: 'megging4.png',
 	},
 	{
@@ -40,6 +44,7 @@ meggings = Megging.create ([
 		color: 'Black', 
 		size: 'M',
 		tightness: 'super-skinny',
+		price: '$89.99',
 		photo_url: 'megging5.png',
-	},
+	}
 	])
