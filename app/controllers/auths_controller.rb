@@ -17,7 +17,9 @@ class AuthsController < ApplicationController
 			session[:user_id] = user.id
 			redirect_to profiles_path
 		else
+			flash[:notice] = "Incorrect username or password."
 			redirect_to new_auth_path
+
 		end
 	end
 
@@ -25,4 +27,8 @@ class AuthsController < ApplicationController
 		session[:user_id] = nil
 		redirect_to root_path
 	end
+
+	
+
+
 end

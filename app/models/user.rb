@@ -13,6 +13,8 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
+  validates :username, uniqueness: true
+
   has_one :shopping_cart
 
 

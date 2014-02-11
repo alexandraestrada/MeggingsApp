@@ -16,6 +16,7 @@
 			<p class="navbar-text navbar-right">
 		 		<%= current_user ? "Hello "+ current_user.username.capitalize + "!": "" %>
 			</p>
+			
 				
 		<%else %>
 		
@@ -26,7 +27,7 @@
 		
 
 		<h1 id="logo"> Meggings </h1>
-		Current User is: <%= current_user ? current_user.username : "(not logged in)" %>
+		 <%#= current_user ? current_user.username : "(not logged in)" %>
 
 		<!-- <h3 id="logo2"> Men's Fashion Redefined.</h3> -->
 

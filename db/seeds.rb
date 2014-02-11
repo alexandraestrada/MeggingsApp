@@ -7,6 +7,56 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 meggings = Megging.create ([
+	
+	{
+		name: 'The Megging', 
+		color: 'Black', 
+		size: 'M',
+		tightness: 'super-skinny',
+		price: '$89.99',
+		photo_url: 'megging5.png',
+	},
+	{
+		name: 'Purple Fever', 
+		color: 'Purple', 
+		size: 'M',
+		tightness: 'super-skinny',
+		price: '$89.99',
+		photo_url: 'megging8.jpg',
+	},
+	{
+		name: 'The Iggy', 
+		color: 'Black', 
+		size: 'M',
+		tightness: 'super-skinny',
+		price: '$89.99',
+		photo_url: 'megging9.jpg',
+	},
+	{
+		name: 'Flow Crop', 
+		color: 'Grey', 
+		size: 'M',
+		tightness: 'nut huggin',
+		price: '$89.99',
+		photo_url: 'megging12.jpg',
+	},
+
+	{
+		name: 'Rainbow Heaven', 
+		color: 'Black', 
+		size: 'M',
+		tightness: 'super-skinny',
+		price: '$89.99',
+		photo_url: 'megging10.jpg',
+	},
+	{
+		name: 'Yoga Flow', 
+		color: 'Grey', 
+		size: 'M',
+		tightness: 'super-skinny',
+		price: '$89.99',
+		photo_url: 'megging11.jpg',
+	},
 	{
 		name: 'White Boy Megging', 
 		color: 'White', 
@@ -23,28 +73,20 @@ meggings = Megging.create ([
 		price: '$89.99',
 		photo_url: 'megging2.png',
 	},
-	{
-		name: 'School Girl', 
-		color: 'Black', 
-		size: 'S',
-		tightness: 'super-skinny',
-		price: '$89.99',
-		photo_url: 'megging3.png',
-	},
+	# {
+	# 	name: 'School Girl', 
+	# 	color: 'Black', 
+	# 	size: 'S',
+	# 	tightness: 'super-skinny',
+	# 	price: '$89.99',
+	# 	photo_url: 'megging3.png',
+	# },
 	{
 		name: 'The Diaper', 
-		color: 'Dark Grey', 
+		color: 'Grey', 
 		size: 'L',
 		tightness: 'skinny',
 		price: '$89.99',
 		photo_url: 'megging4.png',
 	},
-	{
-		name: 'The Megging', 
-		color: 'Black', 
-		size: 'M',
-		tightness: 'super-skinny',
-		price: '$89.99',
-		photo_url: 'megging5.png',
-	}
 	])
