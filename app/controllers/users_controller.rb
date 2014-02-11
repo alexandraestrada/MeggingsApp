@@ -12,6 +12,6 @@ class UsersController < ApplicationController
   def create
 		user = User.create(params.require(:user).permit(:username, :password, :email))
 		session[:user_id] = user.id
-		redirect_to users_path
+		redirect_to profiles_path
 	end
 end
