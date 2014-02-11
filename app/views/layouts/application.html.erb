@@ -8,18 +8,29 @@
 </head>
 <body>
 	<header id="header">
-		<p id="sign-in"><%= link_to 'Sign Up', new_user_path %><p>
+
 		<%if current_user %>
-		<%= link_to "sign out", auths_path, method: :delete %>
+			<p class="navbar-text navbar-right"> 
+				<%= link_to 'Sign Out', auths_path, method: :delete, class: "navbar-link" %>
+			</p>
+			<p class="navbar-text navbar-right">
+		 		<%= current_user ? "Hello "+ current_user.username.capitalize + "!": "" %>
+			</p>
+				
+		<% else %>
+		
+			<p class="navbar-text navbar-right"> <%= link_to 'Sign Up', new_user_path, class: "navbar-link" %></p>
+			<p class="navbar-text navbar-right"> <%= link_to 'Sign In', new_auth_path, class: "navbar-link" %></p>
+			<!-- <p class="sign-in-up" id="sign-in"><%= link_to 'Sign Up', new_user_path %><p> -->
 		<%end%>
+		
 
 		<h1 id="logo"> Meggings </h1>
+		Current User is: <%= current_user ? current_user.username : "(not logged in)" %>
 
 		<!-- <h3 id="logo2"> Men's Fashion Redefined.</h3> -->
 
-	<div class="pull-right">
-		 <%= current_user ? "Hello"+ current_user.username + "!": "" %>
-	</div>
+	
 
 	</header>
 
