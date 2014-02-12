@@ -4,6 +4,10 @@
 html,body {
   height:100%;
 }
+.banner {
+	background: url(/assets/carousel-image2.jpg);
+	height: 400px;
+}
 
 .pull-right {
 	font-size: 14px;
@@ -68,7 +72,7 @@ p.megging-name, p.description {
 	margin: 0 auto;
 }
  #megging-experience {
- 	font-size: 150px;
+ 	font-size: 60px;
  }
 #definition {
 	text-align: left;

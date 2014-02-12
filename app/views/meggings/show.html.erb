@@ -4,30 +4,35 @@
 <!--%=link_to'Edit Megging', edit_megging_path %-->
 
 <!--%=#button_to'Delete Megging', megging_path(@megging), {method: :delete} %-->
+<div class = "container">
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+	<dd><%= image_tag @megging.photo_url, size: '400x500' %></dd>
+  </div>
+  <div class="col-xs-6 col-md-4">
+	<dt>Name</dt>
+		<dd><%= @megging.name %></dd>
 
-<div class= "megging-p-display">
+	<dt>Color</dt>
+		<dd><%= @megging.color %></dd>
 
+	<dt>Size</dt>
+		<dd><%= @megging.size %></dd>
 
-<dt></dt>
-<dd><%= image_tag @megging.photo_url, size: '400x500' %></dd>
+	<dt>Tightness</dt>
+		<dd><%= @megging.tightness %></dd>
 
+	<dt> Price</dt>
+		<dd><%= @megging.price %></dd><br />
 
-<dt>Name</dt>
-<dd><%= @megging.name %></dd>
+  </div>
+</div>
 
-<dt>Color</dt>
-<dd><%= @megging.color %></dd>
-
-<dt>Size</dt>
-<dd><%= @megging.size %></dd>
-
-<dt>Tightness</dt>
-<dd><%= @megging.tightness %></dd>
-
-<dt> Price</dt>
-<dd><%= @megging.price %></dd><br />
 
 </div>
+
+
+
 
 
 
