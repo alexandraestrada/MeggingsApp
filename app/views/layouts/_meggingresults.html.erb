@@ -17,7 +17,7 @@
 				Tightness: <%= megging.tightness %>	<br /> -->
 				<%= megging.name %><br />
 				<%= link_to "View Details", megging %><br />
-				<%= link_to "Add to Cart", '#' %><br /><br />
+				<%= button_to "Add Item to Cart", add_megging_path(megging), method: :post  %><br /><br />
 				</p>		
 				
 	

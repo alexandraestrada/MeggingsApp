@@ -1,8 +1,9 @@
 
-<h1 class = "greeting">
+<h1 class = "greeting">hello <%= current_user && current_user.username %></h1>
 	<% if current_user %>
-		<p class="pull-right"><%= link_to "Shopping Cart" + "(2)", '#' %>
-			</p>
+		<p class="pull-right">
+			<%= link_to "Shopping Cart (" + current_user.shopping_cart.meggings.count.to_s + " items)", '#' %>
+		</p>
 		<%#= "Welcome " + current_user.username + "!" %><br />
 	<% end %>
 	<%= render 'layouts/meggingresults' %>

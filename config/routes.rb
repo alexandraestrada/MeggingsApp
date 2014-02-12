@@ -11,6 +11,10 @@ Meggings2::Application.routes.draw do
   # get "meggings/edit"
 
 
+  post "shopping_cart/add/:megging_id" => 'shopping_carts#add', as: :add_megging 
+  post "shopping_cart/remove/:megging_id" => 'shopping_carts#remove', as: :remove_megging
+
+
   resources :meggings, only: [:index, :create, :new, :edit, :show, :update, :destroy]
 
   get "meggings/welcome" => 'meggings#welcome'
@@ -18,12 +22,9 @@ Meggings2::Application.routes.draw do
 
   resources :users, only: [:index,:new,:create]
   resources :auths, only: [:new, :create]
-  resources :shopping_carts 
+  resource :shopping_cart, only: [:show, :update]
   delete "auths" => "auths#destroy"
   resources :profiles
-
-  
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
