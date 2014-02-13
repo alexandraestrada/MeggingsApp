@@ -40,7 +40,7 @@
 			<% if current_user.shopping_cart == nil %>
 				<%= link_to "Shopping Cart (0 items)", '#' %>
 			<% else %>
-			<%= link_to "Shopping Cart (" + current_user.shopping_cart.meggings.count.to_s + " items)", '#' %>
+			<%= link_to "Shopping Cart (" + current_user.shopping_cart.meggings.count.to_s + " items)", shopping_cart_path %>
 			<% end %>
 		</p>
 		<%#= "Welcome " + current_user.username + "!" %><br />

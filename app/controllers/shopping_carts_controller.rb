@@ -1,16 +1,9 @@
 class ShoppingCartsController < ApplicationController
   def new
-    @shoppingCart = ShoppingCart.new
+    @shopping_cart = ShoppingCart.new
   end
 
-  def show
-  end
 
-  def update
-  end
-
-  def edit
-  end
 
   def add
   	if current_user.shopping_cart.nil? 
@@ -23,6 +16,16 @@ class ShoppingCartsController < ApplicationController
   	end
   end
 
-  def remove
+  def show
+   @shopping_cart = current_user.shopping_cart
+  end
+
+
+ 
+
+  def destroy
+    megging = Megging.find(params[:megging_id])
+    megging.destroy
+    redirect_to shopping_cart_path
   end
 end

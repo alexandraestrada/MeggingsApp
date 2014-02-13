@@ -1,0 +1,29 @@
+<%# @shopping_cart.meggings.each do |m| %>
+	<%#= debug m %>
+<%#end%>
+
+<table>
+ <!--  <tr>
+    <th>Image</th>
+    <th>Color</th>
+    <th>Size</th>
+    <th>Tightness</th>
+    <th>Price</th> -->
+    
+
+
+  </tr>
+ 
+<% @shopping_cart.meggings.each do |m| %>
+  <tr>
+    <td><%= image_tag m.photo_url, size: '200x300', class: "image-center" %></td>
+    <td><%= m.color %></td>
+
+    <td><%= m.size %></td>
+    <td><%= m.tightness %></td>
+    <td><%= m.price %></td>
+    <td><%#= link_to "Edit", edit_book_path(book) %></td>
+    <td><%= link_to "Remove Item",m, method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
+</table>
