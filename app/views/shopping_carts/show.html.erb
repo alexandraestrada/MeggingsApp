@@ -13,7 +13,7 @@
 
 
   </tr>
- 
+ <%=notice%>
 <% @shopping_cart.meggings.each do |m| %>
   <tr>
     <td><%= image_tag m.photo_url, size: '200x300', class: "image-center" %></td>
@@ -22,8 +22,10 @@
     <td><%= m.size %></td>
     <td><%= m.tightness %></td>
     <td><%= m.price %></td>
-    <td><%#= link_to "Edit", edit_book_path(book) %></td>
-    <td><%= link_to "Remove Item",m, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    
+
+    <td><%= button_to "Remove", remove_megging_path(m.id), method: :post %></td>
+    <td><%#= link_to "Remove Item",m, method: :delete, data: { confirm: "Are you sure?" } %></td>
   </tr>
 <% end %>
 </table>
