@@ -8,7 +8,9 @@ html,body {
 	background: url(/assets/carousel-image2.jpg);
 	height: 400px;
 }
-
+#megging-price {
+	color: #a76939;
+}
 .pull-right {
 	font-size: 14px;
 	margin-top: -40px;
@@ -57,7 +59,7 @@ html,body {
 
 
 
-p.megging-name, p.description, .add-item-button {
+p.megging-name, p.description, .add-item-button{
 	text-align: center;
 }
 

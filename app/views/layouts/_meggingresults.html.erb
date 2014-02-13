@@ -9,16 +9,19 @@
  	<div class="col-md-4 col-s-6 col-xs-12 list"> 
  		
 				<p class= "megging-name">
-					<%= image_tag(megging.photo_url, size: '255x355', class: "image-center") %></p>
+					<%= image_tag(megging.photo_url, size: '200x300', class: "image-center") %></p>
 				<p class="description">
 				<!-- Name: <%= megging.name%><br />
 				Color: <%= megging.color %><br />
 				Size: <%= megging.size %><br />
 				Tightness: <%= megging.tightness %>	<br /> -->
-				<%= megging.name %><br />
-				<%= link_to "View Details", megging %><br />
-				<%= button_to "Add Item to Cart", add_megging_path(megging), method: :post, class: "add-item-button"  %><br /><br />
-				</p>		
+					<%= megging.name %><br />
+					<span id="megging-price"><%= megging.price %></span><br />
+					<%= link_to "View Details", megging %><br /></p>
+				<div class = "add-item-button">
+				<%= button_to "Add Item to Cart", add_megging_path(megging), method: :post %><br /><br />
+				</div>
+						
 				
 	
 
@@ -27,3 +30,5 @@
 		<% end %>
 	</div>
 </div>
+
+

@@ -13,11 +13,11 @@ class AuthsController < ApplicationController
 
   def create
 		user = User.find_by(username: params[:user][:username])
-		if user.authenticated?(params[:user][:password])
+		if user && user.authenticated?(params[:user][:password])
 			session[:user_id] = user.id
 			redirect_to profiles_path
 		else
-			flash[:notice] = "Incorrect username or password."
+			flash[:error] = "Incorrect username or password."
 			redirect_to new_auth_path
 
 		end

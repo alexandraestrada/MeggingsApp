@@ -24,6 +24,9 @@
 
 	<dt> Price</dt>
 		<dd><%= @megging.price %></dd><br />
+	<div>
+		<%= button_to "Add Item to Cart", add_megging_path(@megging), method: :post %><br /><br />
+	</div>
 		
 
   </div>
