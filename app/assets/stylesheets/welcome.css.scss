@@ -8,6 +8,8 @@
 html, body, .container-fluid, .row {
 	height: 480px;
 }
+
+
 .banner {
 background: url(/assets/carousel-image2.jpg)
 }
@@ -32,5 +34,20 @@ background: url(/assets/carousel-image2.jpg)
 	
 }
 
+.sign-in-modal {
+	text-align: center;
+}
+.btn {
+	background-color: red;
+	color: white;
+}
 
-
+.btn{
+	color: white;
+}
+a:visited{
+	&#shop-now {
+		color: white;
+	}
+	
+}

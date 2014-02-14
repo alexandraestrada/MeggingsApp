@@ -1,23 +1,18 @@
 
-<%= render 'users/signup' %> 
-
-<!-- 
-<h1 id="title"> Sign Up</h1>
 <div class="sign-up">	
 	<div>
-
-	<%#= form_for @user, :html => {:class => "sign-up-form"} do |u| %> 
+	<h1 id="title"> Sign Up</h1>
+	<%= form_for @user, :html => {:class => "sign-up-form"} do |u| %> 
 		
-		<%#= u.label :username %> </br>
-		<%#= u.text_field :username %> </br>
-		<%#= u.label :email %> </br>
-		<%#= u.text_field :email %></br>
-		<%#= u.label :password %></br>
-		<%#= u.password_field :password %></br><br />
+		<%= u.label :username %> </br>
+		<%= u.text_field :username %> </br>
+		<%= u.label :email %> </br>
+		<%= u.text_field :email %></br>
+		<%= u.label :password %></br>
+		<%= u.password_field :password %></br><br />
 		
-		<%#= u.button "Sign Up" %></br></br>
+		<%= u.button "Sign Up" %></br></br>
 		<%= notice %></br></br>
-	<%# end %>
+	<% end %>
 	</div>
 </div>
- -->
