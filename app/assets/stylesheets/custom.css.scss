@@ -19,13 +19,14 @@ html,body {
 }
 
 #header {
-	height: 80px;
-	border: 1px solid black;
+	height: 60px;
+	// border: 1px solid black;
 	font-family: 'Montserrat Alternates', sans-serif;
 }
 #logo {
-	margin-left: 10px;
+	margin-left: 30px;
 	margin-top: 0px;
+	color: rgb(99, 106, 121)
 }
 #sign-in {
 	text-align: right;

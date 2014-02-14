@@ -16,8 +16,8 @@ Meggings2::Application.routes.draw do
 
 
   resources :meggings, only: [:index, :create, :new, :edit, :show, :update, :destroy]
-
-  get "meggings/welcome" => 'meggings#welcome'
+  resources :welcom, only: [:index]
+  # get "meggings/welcome" => 'meggings#welcome'
   # delete "meggings/:id" => 'meggings#destroy'
 
   resources :users, only: [:index,:new,:create]
@@ -33,7 +33,7 @@ Meggings2::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'meggings#welcome'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

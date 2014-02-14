@@ -1,0 +1,36 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Allerta);
+
+html, body, .container-fluid, .row {
+	height: 480px;
+}
+.banner {
+background: url(/assets/carousel-image2.jpg)
+}
+
+.copy {
+	margin-top: 130px;
+}
+  .heading-title {
+	font-size: 38px;
+	font-family: 'Allerta', sans-serif;
+	color: rgb(107, 105, 134)
+ }
+ .heading-title2 {
+  	font-size: 18px;
+  	color: black;
+  	font-family: 'Allerta', sans-serif;
+
+ }
+
+.banner-button {
+	background-color: rgb(192, 13, 13);
+	
+}
+
+
+

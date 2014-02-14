@@ -1,7 +1,17 @@
 <!-- <h1>Meggings</h1> -->
 
-
-<div class="container show">
+	<% if current_user %>
+		<p class="pull-right">
+			<% if current_user.shopping_cart == nil %>
+				<%= link_to "Shopping Cart (0 items)", '#' %>
+			<% else %>
+			<span class="glyphicon glyphicon-shopping-cart"></span>
+			<%= link_to current_user.shopping_cart.meggings.count.to_s + " item(s)", shopping_cart_path %>
+			<% end %>
+		</p>
+		<%#= "Welcome " + current_user.username + "!" %><br />
+	<% end %>
+<div class="containershow">
 	<div class= "row">
 	<% @meggings.each do |megging| %>
 

@@ -20,14 +20,14 @@
 				
 		<%else %>
 		
-			<p class="navbar-text navbar-right"> <%= link_to 'Sign Up', new_user_path, class: "navbar-link" %></p>
+			<p class="navbar-text navbar-right"> <%= link_to 'Sign in  | Sign Up',"#", class: "navbar-link", 'data-toggle' =>"modal", 'data-target'=>"#signup" %></p>
 			<p class="navbar-text navbar-right"> <%= link_to 'Sign In', new_auth_path, class: "navbar-link" %></p>
 			<!-- <p class="sign-in-up" id="sign-in"><%= link_to 'Sign Up', new_user_path %><p> -->
 		<%end%>
 
 		
 
-		<h1 id="logo"> Meggings </h1>
+		<h1 id="logo"> Manx </h1>
 		 <%#= current_user ? current_user.username : "(not logged in)" %>
 
 		<!-- <h3 id="logo2"> Men's Fashion Redefined.</h3> -->
@@ -40,14 +40,18 @@
 			<% if current_user.shopping_cart == nil %>
 				<%= link_to "Shopping Cart (0 items)", '#' %>
 			<% else %>
-			<%= link_to "Shopping Cart (" + current_user.shopping_cart.meggings.count.to_s + " items)", shopping_cart_path %>
+			<span class="glyphicon glyphicon-shopping-cart"></span>
+			<%= link_to current_user.shopping_cart.meggings.count.to_s + " item(s)", shopping_cart_path %>
 			<% end %>
 		</p>
 		<%#= "Welcome " + current_user.username + "!" %><br />
 	<% end %>
 
+	
+
 <%= yield %>
 
+<%=render partial:'welcome/signup' %>
 
 
 </body>
