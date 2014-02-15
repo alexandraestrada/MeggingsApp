@@ -19,15 +19,27 @@ html,body {
 }
 
 #header {
-	height: 60px;
+	height: 18px;
 	// border: 1px solid black;
 	font-family: 'Montserrat Alternates', sans-serif;
 }
 #logo {
 	margin-left: 30px;
-	margin-top: 0px;
-	color: rgb(99, 106, 121)
+	margin-top: 3px;
+	color: rgb(99, 106, 121);
+	
 }
+
+a{
+	&#logo {
+		font-size: 50px;
+		background-color: white;
+		text-decoration: none;
+	}
+	
+}
+
+
 #sign-in {
 	text-align: right;
 	margin-top: 3px;
@@ -58,8 +70,6 @@ html,body {
 	width: 100%;
 }
 
-
-
 p.megging-name, p.description, .add-item-button{
 	text-align: center;
 }
@@ -84,3 +94,46 @@ p.megging-name, p.description, .add-item-button{
 #span-definition {
 	font-size: 19px;
 }
+.shopping-cart-row {
+	height: 30px;
+}
+.sc-glyphicon {
+	float: right;
+	margin-right: 85px;
+}
+.image-center{
+	z-index:-1;
+	position: absolute;
+	left: 21px;
+}
+
+
+.image_box{
+	z-index: 10;
+	width: 200px;
+	height: 300px;
+	margin: 0 auto;
+	span{
+		text-align: center;
+		opacity: 0;
+	}
+
+}
+.image_box:hover{
+	background-color: rgba(0,0,0,.3);
+	span{
+		text-align: center;
+		color: white;
+		background-color: black;
+		opacity: 1;
+	}
+}
+
+.list{
+	border: 1px solid #ccc;
+	margin-left: 50px;
+	width: 250px;
+	margin-bottom: 50px;
+}
+
+
