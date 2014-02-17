@@ -2,6 +2,7 @@ class MeggingsController < ApplicationController
 	
   def index
   	@meggings = Megging.all
+    
   end
 
   def new
@@ -19,6 +20,11 @@ class MeggingsController < ApplicationController
   end
 
  
+  def show
+    @megging = Megging.find(params[:id])
+  end
+  
+
 #   # def update
 #   #   @megging = Megging.find(params[:id])
 #   #   if @megging.update_attributes(megging_params)
@@ -27,12 +33,6 @@ class MeggingsController < ApplicationController
 #   #     render action: 'edit' 
 #   #   end 
 #   # end
-
- 
-  def show
-    @megging = Megging.find(params[:id])
-  end
-  
 
  # def edit
  #    @megging = Megging.find(params[:id])

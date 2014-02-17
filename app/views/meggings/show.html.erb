@@ -1,5 +1,29 @@
-<%= link_to 'Back to Megging List', action: 'index' %><br /><br />
+<br />
+<br />
+<div class="back-button">
+<%= link_to 'Back', action: 'index', :class => "back-button" %>
+</div>
+<% if !current_user %>
+	<div class = "non-user-sc">
+				<p class="sc-glyphicon">
+					<span class="glyphicon glyphicon-shopping-cart"></span>
+						<%= link_to "(0 items)", '#' %>
+	</div>
 
+<% end %>
+	
+			<% if current_user %>
+				<p class="sc-glyphicon">
+					<span class="glyphicon glyphicon-shopping-cart"></span>
+					<% if current_user.shopping_cart == nil %>
+						<%= link_to "(0 items)", '#' %>
+					<% else %>
+					
+					<%= link_to current_user.shopping_cart.meggings.count.to_s + " item(s)", shopping_cart_path %>
+					<% end %>
+				</p>
+			<%#= "Welcome " + current_user.username + "!" %><br />
+			<% end %>
 
 <!--%=link_to'Edit Megging', edit_megging_path %-->
 
@@ -24,8 +48,11 @@
 
 	<dt> Price</dt>
 		<dd><%= @megging.price %></dd><br />
+
 	<div>
+		<%if current_user%>
 		<%= button_to "Add Item to Cart", add_megging_path(@megging), method: :post %><br /><br />
+		<%end%>
 	</div>
 		
 

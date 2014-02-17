@@ -1,12 +1,26 @@
 <!-- <h1>Meggings</h1> -->	
+<%# if !current_user %>
+	<!-- <p class="sc-glyphicon"> -->
+<!-- 	<span class ="glyphicon glyphicon-shopping-cart"></span>
+ -->	<%#link_to "Shopping Cart (0 items)",'#' %>
+<%#end%>
 
-		
+<% if !current_user %>
+	<div class = "non-user-sc">
+				<p class="sc-glyphicon">
+					<span class="glyphicon glyphicon-shopping-cart"></span>
+						<%= link_to "(0 items)", '#' %>
+	</div>
+
+<% end %>
+	
 			<% if current_user %>
 				<p class="sc-glyphicon">
-					<% if current_user.shopping_cart == nil %>
-						<%= link_to "Shopping Cart (0 items)", '#' %>
-					<% else %>
 					<span class="glyphicon glyphicon-shopping-cart"></span>
+					<% if current_user.shopping_cart == nil %>
+						<%= link_to "(0 items)", '#' %>
+					<% else %>
+					
 					<%= link_to current_user.shopping_cart.meggings.count.to_s + " item(s)", shopping_cart_path %>
 					<% end %>
 				</p>
@@ -16,12 +30,14 @@
 
 <div class="container">
 	<div class= "row">
-		<% @meggings.each do |megging| %>
+		<% @meggings.each do |megging| %>	
 
  			<div class="col-md-3 col-s-6 col-xs-12 list"> 
  		
 				<p class= "megging-name">
-					<div class="image_box"><span>View Details</span><%= image_tag(megging.photo_url, size: '200x300', class: "image-center") %></p></div>
+					<div class="image_box">
+						<span><%= link_to "View Details", megging, :id => "view-details" %></span>
+						<%=link_to image_tag(megging.photo_url, size: '200x300', class: "image-center"), megging %></div></p>
 				<p class="description">
 				<!-- Name: <%= megging.name%><br />
 				Color: <%= megging.color %><br />
@@ -29,14 +45,14 @@
 				Tightness: <%= megging.tightness %>	<br /> -->
 					<%= megging.name %><br />
 					<span id="megging-price"><%= megging.price %></span><br />
-					<%= link_to "View Details", megging %><br /></p>
-				<div class = "add-item-button">
-				<%= button_to "Add Item to Cart", add_megging_path(megging), method: :post %><br />
-				</div>
+					</p>
+				<!-- <div class = "add-item-button"> -->
+				<%#= button_to "Add Item to Cart", add_megging_path(megging), method: :post %>
+			
 			</div>
 		<% end %>
 	</div>
 </div>
 
-
+<%#=render partial:'meggings/viewdetails' %>
 

@@ -29,25 +29,50 @@ background: url(/assets/carousel-image2.jpg)
 
  }
 
-.banner-button {
-	background-color: rgb(20, 29, 71);
-	
-}
-
-.sign-in-modal {
-	text-align: center;
-}
-.btn {
-	background-color: red;
-	color: white;
-}
-
 .btn{
-	background-color: rgb(20, 29, 71);
+	background-color: #192768;
 }
 a:visited{
 	&#shop-now {
 		color: white;
 	}
 	
+}
+a:hover{
+	&#shop-now {
+		background-color: rgb(99, 106, 121);
+	}
+}
+
+.megging-box {
+	height: 345px;
+	background-color: #eaeaea;
+	text-align: center;
+	padding-top: 35px;
+
+}
+#megging-box-title {
+	color: #192768;
+	padding-bottom: 5px;
+	font-family: 'Allerta', sans-serif
+
+}
+.megging-box-header {
+	// font-family: 'Allerta', sans-serif;
+	color: black;
+}
+.megging-box-description {
+	font-decoration: bold;
+	color: #192768;
+}
+.megging-definition {
+	// border: 1px solid black;
+
+	height: 400px;
+}
+.img-def {
+	}
+
+#megging-def {
+	padding-top: 150px;
 }

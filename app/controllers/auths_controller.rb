@@ -18,7 +18,7 @@ class AuthsController < ApplicationController
 			redirect_to profiles_path
 		else
 			flash[:error] = "Incorrect username or password."
-			redirect_to new_auth_path
+			redirect_to new_user_path
 
 		end
 	end

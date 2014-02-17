@@ -2,29 +2,21 @@
 	<%#= debug m %>
 <%#end%>
 
-<table>
- <!--  <tr>
-    <th>Image</th>
-    <th>Color</th>
-    <th>Size</th>
-    <th>Tightness</th>
-    <th>Price</th> -->
-    
+<table class="table shopping-cart-table">
 
+ <%=flash[notice]%>
 
-  </tr>
- <%=notice%>
 <% @shopping_cart.meggings.each do |m| %>
-  <tr>
-    <td><%= image_tag m.photo_url, size: '200x300', class: "image-center" %></td>
-    <td><%= m.color %></td>
+  <tr class="shopping-cart-results">
+    <td id="scphoto"><%= image_tag m.photo_url, size: '200x300', class: "image-center" %></td>
+    <td class="scresults"><%= m.color %></td>
 
-    <td><%= m.size %></td>
-    <td><%= m.tightness %></td>
-    <td><%= m.price %></td>
+    <td class="scresults"><%= m.size %></td>
+    <td class="scresults"><%= m.tightness %></td>
+    <td class="scresults"><%= m.price %></td>
     
 
-    <td><%= button_to "Remove", remove_megging_path(m.id), method: :post %></td>
+    <td id="scremove"><%= button_to "Remove", remove_megging_path(m.id), method: :post %></td>
     <td><%#= link_to "Remove Item",m, method: :delete, data: { confirm: "Are you sure?" } %></td>
   </tr>
 <% end %>
